@@ -1,0 +1,209 @@
+ [0.604864 ms] ASIC_680ks.mtx:
+Parsing time: 715621.3 us (716 ms),  stats: rows=682712 cols=682712 nnz=2329176 workset~33.41 MB
+COO SpMV: - serial: (2912.6 us) (19.2 GB/s)
+          - parallel: (3798.6 us) (14.7 GB/s)
+          - GPU basic: (116.4 us) (480.1 GB/s)
+          - GPU custom 1: (67.2 us) (832.2 GB/s)
+          - GPU custom 2: (117.1 us) (477.2 GB/s)
+          - GPU cuSParse: (57.8 us) (967.9 GB/s)
+COO to CSR conversion time: 8242.5 us
+CSR SpMV: - serial: (2665.2 us) (20.6 GB/s)
+          - parallel: (573.1 us) (95.6 GB/s)
+          - GPU basic: (90.9 us) (602.4 GB/s)
+          - GPU custom 1: (501.5 us) (109.2 GB/s)
+          - GPU custom 2: (128.2 us) (427.3 GB/s)
+          - GPU cuSParse: (55.5 us) (986.9 GB/s)
+Results check:  COO = COO_parallel CSR = CSR_parallel COO = CSR
+ COO = COO_cuda_basic COO = COO_cuda_custom_1 COO = COO_cuda_custom_2 COO = COO_cuda_cuSparse CSR = CSR_cuda_basic CSR = CSR_cuda_custom_1 CSR = CSR_cuda_custom_2 CSR = CSR_cuda_cuSparse
+Program finished in 1.287 s
+
+ [1.436928 ms] FullChip.mtx:
+Parsing time: 8515005.4 us (8515 ms),  stats: rows=2987012 cols=2987012 nnz=26621990 workset~343.36 MB
+COO SpMV: - serial: (41726.2 us) (15.3 GB/s)
+          - parallel: (47749.6 us) (13.4 GB/s)
+          - GPU basic: (15979.8 us) (40.0 GB/s)
+          - GPU custom 1: (1030.9 us) (619.8 GB/s)
+          - GPU custom 2: (15982.2 us) (40.0 GB/s)
+          - GPU cuSParse: (532.9 us) (1199.0 GB/s)
+COO to CSR conversion time: 78024.3 us
+CSR SpMV: - serial: (30030.9 us) (18.9 GB/s)
+          - parallel: (12143.0 us) (46.8 GB/s)
+          - GPU basic: (270671.2 us) (2.1 GB/s)
+          - GPU custom 1: (12604.9 us) (45.1 GB/s)
+          - GPU custom 2: (785.4 us) (723.6 GB/s)
+          - GPU cuSParse: (412.2 us) (1378.8 GB/s)
+Results check:  Mismatch at row 4642: 1123.873169 vs 1111.674194 COO != COO_parallel CSR = CSR_parallel COO = CSR
+ COO = COO_cuda_basic COO = COO_cuda_custom_1 COO = COO_cuda_custom_2 Mismatch at row 4642: 1123.873169 vs 1100.014526 COO != COO_cuda_cuSparse CSR = CSR_cuda_basic Mismatch at row 4642: 1123.873169 vs 1103.934570 CSR != CSR_cuda_custom_1 CSR = CSR_cuda_custom_2 Mismatch at row 4642: 1123.873169 vs 1099.925781 CSR != CSR_cuda_cuSparse
+Program finished in 14.399 s
+
+ [0.453440 ms] Ga41As41H72.mtx:
+Parsing time: 4161325.5 us (4161 ms),  stats: rows=268096 cols=268096 nnz=18488476 workset~224.01 MB
+COO SpMV: - serial: (37952.3 us) (11.7 GB/s)
+          - parallel: (30952.7 us) (14.3 GB/s)
+          - GPU basic: (3566.0 us) (124.4 GB/s)
+          - GPU custom 1: (436.9 us) (1015.5 GB/s)
+          - GPU custom 2: (3562.7 us) (124.5 GB/s)
+          - GPU cuSParse: (305.5 us) (1452.6 GB/s)
+COO to CSR conversion time: 62296.7 us
+CSR SpMV: - serial: (18891.4 us) (19.7 GB/s)
+          - parallel: (4371.9 us) (85.3 GB/s)
+          - GPU basic: (529.7 us) (704.1 GB/s)
+          - GPU custom 1: (323.8 us) (1151.9 GB/s)
+          - GPU custom 2: (252.0 us) (1480.1 GB/s)
+          - GPU cuSParse: (217.9 us) (1711.7 GB/s)
+Results check:  COO = COO_parallel CSR = CSR_parallel COO = CSR
+ COO = COO_cuda_basic COO = COO_cuda_custom_1 COO = COO_cuda_custom_2 COO = COO_cuda_cuSparse CSR = CSR_cuda_basic CSR = CSR_cuda_custom_1 CSR = CSR_cuda_custom_2 CSR = CSR_cuda_cuSparse
+Program finished in 5.761 s
+
+ [0.346560 ms] Si41Ge41H72.mtx:
+Parsing time: 3391069.1 us (3391 ms),  stats: rows=185639 cols=185639 nnz=15011265 workset~181.62 MB
+COO SpMV: - serial: (31731.1 us) (11.4 GB/s)
+          - parallel: (25093.7 us) (14.4 GB/s)
+          - GPU basic: (3409.9 us) (105.7 GB/s)
+          - GPU custom 1: (355.2 us) (1014.2 GB/s)
+          - GPU custom 2: (3412.2 us) (105.6 GB/s)
+          - GPU cuSParse: (248.3 us) (1450.8 GB/s)
+COO to CSR conversion time: 51307.4 us
+CSR SpMV: - serial: (15556.8 us) (19.4 GB/s)
+          - parallel: (3385.5 us) (89.3 GB/s)
+          - GPU basic: (459.7 us) (658.0 GB/s)
+          - GPU custom 1: (248.1 us) (1219.0 GB/s)
+          - GPU custom 2: (206.2 us) (1466.6 GB/s)
+          - GPU cuSParse: (177.5 us) (1704.4 GB/s)
+Results check:  COO = COO_parallel CSR = CSR_parallel COO = CSR
+ COO = COO_cuda_basic COO = COO_cuda_custom_1 COO = COO_cuda_custom_2 COO = COO_cuda_cuSparse CSR = CSR_cuda_basic CSR = CSR_cuda_custom_1 CSR = CSR_cuda_custom_2 CSR = CSR_cuda_cuSparse
+Program finished in 4.759 s
+
+ [0.638688 ms] StocF-1465.mtx:
+Parsing time: 4598787.5 us (4599 ms),  stats: rows=1465137 cols=1465137 nnz=21005389 workset~263.79 MB
+COO SpMV: - serial: (27866.1 us) (18.1 GB/s)
+          - parallel: (35282.7 us) (14.3 GB/s)
+          - GPU basic: (1489.0 us) (338.6 GB/s)
+          - GPU custom 1: (507.5 us) (993.4 GB/s)
+          - GPU custom 2: (1488.4 us) (338.7 GB/s)
+          - GPU cuSParse: (384.6 us) (1310.7 GB/s)
+COO to CSR conversion time: 61246.1 us
+CSR SpMV: - serial: (18964.1 us) (23.1 GB/s)
+          - parallel: (4259.4 us) (102.8 GB/s)
+          - GPU basic: (429.0 us) (1020.4 GB/s)
+          - GPU custom 1: (1099.8 us) (398.0 GB/s)
+          - GPU custom 2: (421.3 us) (1039.0 GB/s)
+          - GPU cuSParse: (285.0 us) (1535.9 GB/s)
+Results check:  COO = COO_parallel CSR = CSR_parallel COO = CSR
+ Mismatch at row 337894: 9.464050 vs 9.585442 COO != COO_cuda_basic Mismatch at row 15671: 565058.437500 vs 557128.000000 COO != COO_cuda_custom_1 Mismatch at row 461213: -33.994537 vs -34.750031 COO != COO_cuda_custom_2 Mismatch at row 15671: 565058.437500 vs 557056.000000 COO != COO_cuda_cuSparse Mismatch at row 12686: 21172.724609 vs 20916.699219 CSR != CSR_cuda_basic Mismatch at row 26001: -8.125000 vs -8.500000 CSR != CSR_cuda_custom_1 Mismatch at row 26001: -8.125000 vs -8.500000 CSR != CSR_cuda_custom_2 Mismatch at row 15671: 565058.437500 vs 557056.000000 CSR != CSR_cuda_cuSparse
+Program finished in 6.116 s
+
+ [0.670496 ms] bone010.mtx:
+Parsing time: 13212495.2 us (13212 ms),  stats: rows=986703 cols=986703 nnz=71666325 workset~867.89 MB
+COO SpMV: - serial: (135204.7 us) (12.7 GB/s)
+          - parallel: (119919.0 us) (14.3 GB/s)
+          - GPU basic: (11897.1 us) (144.6 GB/s)
+          - GPU custom 1: (1623.8 us) (1059.3 GB/s)
+          - GPU custom 2: (11922.7 us) (144.3 GB/s)
+          - GPU cuSParse: (1110.4 us) (1548.9 GB/s)
+COO to CSR conversion time: 235009.0 us
+CSR SpMV: - serial: (62994.5 us) (22.9 GB/s)
+          - parallel: (12866.7 us) (112.3 GB/s)
+          - GPU basic: (1505.7 us) (959.8 GB/s)
+          - GPU custom 1: (1368.8 us) (1055.8 GB/s)
+          - GPU custom 2: (933.9 us) (1547.5 GB/s)
+          - GPU cuSParse: (803.3 us) (1799.0 GB/s)
+Results check:  COO = COO_parallel CSR = CSR_parallel COO = CSR
+ Mismatch at row 132548: -0.144531 vs 0.063477 COO != COO_cuda_basic Mismatch at row 8160: 0.042969 vs 0.015625 COO != COO_cuda_custom_1 Mismatch at row 8160: 0.042969 vs 0.015625 COO != COO_cuda_custom_2 Mismatch at row 8160: 0.042969 vs 0.031250 COO != COO_cuda_cuSparse Mismatch at row 146034: 0.023193 vs 0.052612 CSR != CSR_cuda_basic Mismatch at row 8160: 0.042969 vs 0.000000 CSR != CSR_cuda_custom_1 Mismatch at row 8160: 0.042969 vs -0.031250 CSR != CSR_cuda_custom_2 Mismatch at row 8160: 0.042969 vs 0.031250 CSR != CSR_cuda_cuSparse
+Program finished in 18.234 s
+
+ [0.462944 ms] boyd2.mtx:
+Parsing time: 220463.7 us (220 ms),  stats: rows=466316 cols=466316 nnz=1500397 workset~21.74 MB
+COO SpMV: - serial: (1864.1 us) (19.3 GB/s)
+          - parallel: (2576.1 us) (14.0 GB/s)
+          - GPU basic: (647.2 us) (55.6 GB/s)
+          - GPU custom 1: (54.7 us) (658.5 GB/s)
+          - GPU custom 2: (645.9 us) (55.7 GB/s)
+          - GPU cuSParse: (43.9 us) (819.7 GB/s)
+COO to CSR conversion time: 5595.7 us
+CSR SpMV: - serial: (1336.2 us) (26.6 GB/s)
+          - parallel: (462.2 us) (77.0 GB/s)
+          - GPU basic: (8835.9 us) (4.0 GB/s)
+          - GPU custom 1: (580.7 us) (61.3 GB/s)
+          - GPU custom 2: (72.1 us) (493.9 GB/s)
+          - GPU cuSParse: (40.6 us) (878.0 GB/s)
+Results check:  COO = COO_parallel CSR = CSR_parallel COO = CSR
+ COO = COO_cuda_basic COO = COO_cuda_custom_1 COO = COO_cuda_custom_2 COO = COO_cuda_cuSparse CSR = CSR_cuda_basic CSR = CSR_cuda_custom_1 CSR = CSR_cuda_custom_2 CSR = CSR_cuda_cuSparse
+Program finished in 0.717 s
+
+ [0.622880 ms] ldoor.mtx:
+Parsing time: 9605743.0 us (9606 ms),  stats: rows=952203 cols=952203 nnz=46522475 workset~565.89 MB
+COO SpMV: - serial: (84055.3 us) (13.3 GB/s)
+          - parallel: (77772.2 us) (14.4 GB/s)
+          - GPU basic: (6268.4 us) (178.1 GB/s)
+          - GPU custom 1: (1054.8 us) (1058.5 GB/s)
+          - GPU custom 2: (6265.7 us) (178.2 GB/s)
+          - GPU cuSParse: (744.6 us) (1499.6 GB/s)
+COO to CSR conversion time: 150237.0 us
+CSR SpMV: - serial: (42094.3 us) (22.4 GB/s)
+          - parallel: (9504.9 us) (99.1 GB/s)
+          - GPU basic: (1035.7 us) (909.4 GB/s)
+          - GPU custom 1: (1023.6 us) (920.2 GB/s)
+          - GPU custom 2: (623.8 us) (1509.9 GB/s)
+          - GPU cuSParse: (547.7 us) (1719.6 GB/s)
+Results check:  COO = COO_parallel CSR = CSR_parallel COO = CSR
+ Mismatch at row 561482: 236.750000 vs 258.000000 COO != COO_cuda_basic Mismatch at row 298051: -379.000000 vs -374.000000 COO != COO_cuda_custom_1 Mismatch at row 561482: 236.750000 vs 240.125000 COO != COO_cuda_custom_2 Mismatch at row 298051: -379.000000 vs -374.000000 COO != COO_cuda_cuSparse Mismatch at row 586901: 27.750000 vs 26.000000 CSR != CSR_cuda_basic Mismatch at row 298051: -379.000000 vs -372.000000 CSR != CSR_cuda_custom_1 Mismatch at row 388501: 316.000000 vs 319.500000 CSR != CSR_cuda_custom_2 Mismatch at row 298051: -379.000000 vs -374.000000 CSR != CSR_cuda_cuSparse
+Program finished in 12.924 s
+
+ [0.593760 ms] mc2depi.mtx:
+Parsing time: 479533.4 us (480 ms),  stats: rows=525825 cols=525825 nnz=2100225 workset~29.41 MB
+COO SpMV: - serial: (2231.1 us) (22.6 GB/s)
+          - parallel: (3414.8 us) (14.8 GB/s)
+          - GPU basic: (70.0 us) (719.6 GB/s)
+          - GPU custom 1: (60.8 us) (828.7 GB/s)
+          - GPU custom 2: (70.1 us) (718.6 GB/s)
+          - GPU cuSParse: (53.9 us) (935.8 GB/s)
+COO to CSR conversion time: 7118.3 us
+CSR SpMV: - serial: (1805.6 us) (26.8 GB/s)
+          - parallel: (412.5 us) (117.1 GB/s)
+          - GPU basic: (42.6 us) (1134.2 GB/s)
+          - GPU custom 1: (389.0 us) (124.2 GB/s)
+          - GPU custom 2: (76.1 us) (635.0 GB/s)
+          - GPU cuSParse: (51.5 us) (938.0 GB/s)
+Results check:  COO = COO_parallel CSR = CSR_parallel COO = CSR
+ COO = COO_cuda_basic COO = COO_cuda_custom_1 COO = COO_cuda_custom_2 COO = COO_cuda_cuSparse CSR = CSR_cuda_basic CSR = CSR_cuda_custom_1 CSR = CSR_cuda_custom_2 CSR = CSR_cuda_cuSparse
+Program finished in 0.871 s
+
+ [0.822720 ms] rajat31.mtx:
+Parsing time: 6294646.9 us (6295 ms),  stats: rows=4690002 cols=4690002 nnz=20316253 workset~281.32 MB
+COO SpMV: - serial: (24631.1 us) (19.8 GB/s)
+          - parallel: (34197.6 us) (14.3 GB/s)
+          - GPU basic: (642.7 us) (758.7 GB/s)
+          - GPU custom 1: (520.6 us) (936.6 GB/s)
+          - GPU custom 2: (643.1 us) (758.2 GB/s)
+          - GPU cuSParse: (450.5 us) (1082.4 GB/s)
+COO to CSR conversion time: 55147.5 us
+CSR SpMV: - serial: (20202.6 us) (22.9 GB/s)
+          - parallel: (4799.8 us) (96.4 GB/s)
+          - GPU basic: (351.6 us) (1315.6 GB/s)
+          - GPU custom 1: (3421.6 us) (135.2 GB/s)
+          - GPU custom 2: (718.3 us) (644.0 GB/s)
+          - GPU cuSParse: (368.8 us) (1254.2 GB/s)
+Results check:  COO = COO_parallel CSR = CSR_parallel COO = CSR
+ COO = COO_cuda_basic COO = COO_cuda_custom_1 COO = COO_cuda_custom_2 COO = COO_cuda_cuSparse CSR = CSR_cuda_basic CSR = CSR_cuda_custom_1 CSR = CSR_cuda_custom_2 CSR = CSR_cuda_cuSparse
+Program finished in 7.907 s
+
+ [0.658304 ms] webbase-1M.mtx:
+Parsing time: 860158.7 us (860 ms),  stats: rows=1000005 cols=1000005 nnz=3105536 workset~45.27 MB
+COO SpMV: - serial: (4691.0 us) (15.9 GB/s)
+          - parallel: (5162.6 us) (14.4 GB/s)
+          - GPU basic: (347.0 us) (214.8 GB/s)
+          - GPU custom 1: (91.8 us) (812.3 GB/s)
+          - GPU custom 2: (348.0 us) (214.2 GB/s)
+          - GPU cuSParse: (82.5 us) (903.1 GB/s)
+COO to CSR conversion time: 10935.1 us
+CSR SpMV: - serial: (4163.3 us) (17.8 GB/s)
+          - parallel: (1431.3 us) (51.8 GB/s)
+          - GPU basic: (665.8 us) (111.3 GB/s)
+          - GPU custom 1: (731.9 us) (101.3 GB/s)
+          - GPU custom 2: (157.8 us) (469.7 GB/s)
+          - GPU cuSParse: (68.6 us) (1080.2 GB/s)
+Results check:  COO = COO_parallel CSR = CSR_parallel COO = CSR
+ COO = COO_cuda_basic COO = COO_cuda_custom_1 COO = COO_cuda_custom_2 COO = COO_cuda_cuSparse CSR = CSR_cuda_basic CSR = CSR_cuda_custom_1 CSR = CSR_cuda_custom_2 CSR = CSR_cuda_cuSparse
+Program finished in 1.390 s
+
