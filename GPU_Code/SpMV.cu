@@ -30,7 +30,7 @@ int main(int argc, char *argv[]) {
     
     /*  Input and output paths definition  */
     // Change base path with the path where you have the code and the matrixes folder
-    const std::filesystem::path base_path = "/home/andreas.chini/GPU_computing"; // Change to adapt to you needs
+    const std::filesystem::path base_path = "/home/name.surname/GPU_computing"; // Change to adapt to you needs
     const std::filesystem::path target_dir = base_path / "Matrixes";
     const std::filesystem::path matrix_numbers_path = base_path / "GPU_Code" / "program_output" / "matrix_numbers.txt";
     const std::filesystem::path spmv_csv_path = base_path / "GPU_Code" / "program_output" / "spmv_results.csv";
